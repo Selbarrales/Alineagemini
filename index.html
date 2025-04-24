@@ -1,11 +1,10 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AlineaFit - Asesorías Fitness Personalizadas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -31,29 +30,9 @@
       font-size: 1.5rem;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
-    .download-button-container {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    .download-button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
   </style>
 </head>
 <body class="bg-black">
-
-  <div class="download-button-container">
-    <button class="download-button" onclick="downloadHTML()">Descargar HTML</button>
-  </div>
 
   <nav class="bg-blue-500 fixed top-0 w-full z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -74,9 +53,18 @@
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Bienvenidos a AlineaFit 💪</h1>
       <p class="text-lg text-gray-300 mb-8">Tu camino personalizado hacia un estilo de vida más saludable y en forma.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <img src="imagen/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md">
-        <img src="imagen/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md">
-        <img src="imagen/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md">
+        <div>
+          <img src="img/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md w-full">
+          <p class="mt-2 text-white">Portada 1</p>
+        </div>
+        <div>
+          <img src="img/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md w-full">
+          <p class="mt-2 text-white">Portada 2</p>
+        </div>
+        <div>
+          <img src="img/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md w-full">
+          <p class="mt-2 text-white">Planes y Costos</p>
+        </div>
       </div>
     </div>
   </header>
@@ -87,11 +75,11 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <blockquote class="bg-gray-800 rounded-lg p-8 shadow-md">
           <p class="text-lg text-gray-300 mb-4">"Desde que empecé con AlineaFit, he notado cambios increíbles en mi energía y mi físico. La asesoría personalizada realmente hace la diferencia. ¡Estoy muy agradecido!"</p>
-          <cite class="text-sm text-gray-400">- Ana Pérez</cite>
+          <cite class="text-sm text-gray-400">– Ana Pérez</cite>
         </blockquote>
         <blockquote class="bg-gray-800 rounded-lg p-8 shadow-md">
           <p class="text-lg text-gray-300 mb-4">"El plan de entrenamiento y la guía nutricional que recibí fueron justo lo que necesitaba. Los resultados hablan por sí solos. ¡Recomiendo AlineaFit a cualquiera que busque un cambio real!"</p>
-          <cite class="text-sm text-gray-400">- Carlos López</cite>
+          <cite class="text-sm text-gray-400">– Carlos López</cite>
         </blockquote>
       </div>
     </div>
@@ -120,25 +108,4 @@
   <a href="https://wa.me/5570869985" target="_blank" class="whatsapp-float">
     <div class="whatsapp-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-        <path fill-rule="evenodd" d="M19.086 3.914a10 10 0 0 1-14.142 14.142L3 21l2.929-2.929a10 10 0 0 1 14.142-14.142zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-1-5a1 1 0 1 0 2 0v3a1 1 0 1 0-2 0v-3zm2 1a1 1 0 1 0-2 0h-1a1 1 0 1 0 0 2h1a1 1 0 1 0 2 0v-1z" clip-rule="evenodd" />
-      </svg>
-    </div>
-  </a>
-
-  <script>
-    function downloadHTML() {
-      const htmlContent = document.documentElement.outerHTML;
-      const blob = new Blob([htmlContent], { type: 'text/html' });
-      const a = document.createElement('a');
-      const url = URL.createObjectURL(blob);
-      a.href = url;
-      a.download = 'index.html';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-  </script>
-
-</body>
-</html>
+        <path fill-rule="evenodd" d="
