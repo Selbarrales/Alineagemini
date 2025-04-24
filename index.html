@@ -1,153 +1,144 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlineaFit - Asesorías Fitness Personalizadas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0D0D0D;
-            color: #FAFAFA;
-        }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        .whatsapp-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #25D366;
-            color: #FAFAFA;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        .whatsapp-icon svg {
-            fill: #FAFAFA;
-        }
-        .download-button-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        .download-button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlineaFit - Asesorías Fitness Personalizadas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0D0D0D;
+      color: #FAFAFA;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #25D366;
+      color: #FAFAFA;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .download-button-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .download-button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
 <body class="bg-black">
 
-    <div class="download-button-container">
-        <button class="download-button" onclick="downloadHTML()">Descargar HTML</button>
+  <div class="download-button-container">
+    <button class="download-button" onclick="downloadHTML()">Descargar HTML</button>
+  </div>
+
+  <nav class="bg-blue-500 fixed top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center">
+        <img src="imagen/Logotipo-alineafit.png" alt="Logo AlineaFit" class="h-8 mr-2">
+        <span class="font-bold text-white">AlineaFit</span>
+      </a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#planes" class="text-white hover:text-gray-200">Planes</a>
+        <a href="#testimonios" class="text-white hover:text-gray-200">Testimonios</a>
+        <a href="#faq" class="text-white hover:text-gray-200">FAQ</a>
+      </div>
     </div>
+  </nav>
 
-    <nav class="bg-blue-500 fixed top-0 w-full z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center">
-                <img src="imagen/Logotipo-alineafit.png" alt="Logo AlineaFit" class="h-8 mr-2">
-                <span class="font-bold text-white">AlineaFit</span>
-            </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#planes" class="text-white hover:text-gray-200">Planes</a>
-                <a href="#testimonios" class="text-white hover:text-gray-200">Testimonios</a>
-                <a href="#faq" class="text-white hover:text-gray-200">FAQ</a>
-            </div>
-            <div class="md:hidden">
-                <button class="text-white focus:outline-none">
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 6H20V8H4V6ZM4 11H20V13H4V11ZM4 16H20V18H4V16Z"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <header class="bg-black py-20 mt-16 md:mt-0">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Bienvenidos a AlineaFit 💪</h1>
+      <p class="text-lg text-gray-300 mb-8">Tu camino personalizado hacia un estilo de vida más saludable y en forma.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="imagen/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md">
+        <img src="imagen/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md">
+        <img src="imagen/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md">
+      </div>
+    </div>
+  </header>
 
-    <header class="bg-black py-20 mt-16 md:mt-0">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Bienvenida a AlineaFit 💪</h1>
-            <p class="text-lg text-gray-300 mb-8">Tu camino personalizado hacia un estilo de vida más saludable y en forma.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="imagen/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md">
-                <img src="imagen/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md">
-                <img src="imagen/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md">
-            </div>
-        </div>
-    </header>
+  <section id="testimonios" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-8">Lo que dicen nuestros clientes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <blockquote class="bg-gray-800 rounded-lg p-8 shadow-md">
+          <p class="text-lg text-gray-300 mb-4">"Desde que empecé con AlineaFit, he notado cambios increíbles en mi energía y mi físico. La asesoría personalizada realmente hace la diferencia. ¡Estoy muy agradecido!"</p>
+          <cite class="text-sm text-gray-400">- Ana Pérez</cite>
+        </blockquote>
+        <blockquote class="bg-gray-800 rounded-lg p-8 shadow-md">
+          <p class="text-lg text-gray-300 mb-4">"El plan de entrenamiento y la guía nutricional que recibí fueron justo lo que necesitaba. Los resultados hablan por sí solos. ¡Recomiendo AlineaFit a cualquiera que busque un cambio real!"</p>
+          <cite class="text-sm text-gray-400">- Carlos López</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
-    <section id="testimonios" class="py-16 bg-gray-900">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-8">Lo que dicen nuestros clientes</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <blockquote class="bg-gray-800 rounded-lg p-8 shadow-md">
-                    <p class="text-lg text-gray-300 mb-4">"Desde que empecé con AlineaFit, he notado cambios increíbles en mi energía y mi físico. La asesoría personalizada realmente hace la diferencia. ¡Estoy muy agradecido!"</p>
-                    <cite class="text-sm text-gray-400">- Ana Pérez</cite>
-                </blockquote>
-                <blockquote class="bg-gray-800 rounded-lg p-8 shadow-md">
-                    <p class="text-lg text-gray-300 mb-4">"El plan de entrenamiento y la guía nutricional que recibí fueron justo lo que necesitaba. Los resultados hablan por sí solos. ¡Recomiendo AlineaFit a cualquiera que busque un cambio real!"</p>
-                    <cite class="text-sm text-gray-400">- Carlos López</cite>
-                </blockquote>
-            </div>
-        </div>
-    </section>
+  <section id="faq" class="py-16 bg-black">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white mb-8 text-center">Preguntas Frecuentes</h2>
+      <div class="space-y-4">
+        <details class="bg-gray-800 rounded-lg p-6 shadow-md">
+          <summary class="text-lg font-semibold text-white cursor-pointer">¿Necesito tener equipo de entrenamiento en casa?</summary>
+          <p class="text-gray-300 mt-2">No necesariamente. Nuestros planes se adaptan a tus recursos y entorno. Podemos diseñar rutinas con tu peso corporal o el equipo que tengas. También podemos recomendarte ejercicios al aire libre.</p>
+        </details>
+        <details class="bg-gray-800 rounded-lg p-6 shadow-md">
+          <summary class="text-lg font-semibold text-white cursor-pointer">¿La asesoría es completamente personalizada?</summary>
+          <p class="text-gray-300 mt-2">¡Absolutamente! Las asesorías son 100% personalizadas, con planes basados en tus objetivos, condición física y estilo de vida. Hay seguimiento continuo y ajustes según avances.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-    <section id="faq" class="py-16 bg-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">Preguntas Frecuentes</h2>
-            <div class="space-y-4">
-                <details class="bg-gray-800 rounded-lg p-6 shadow-md">
-                    <summary class="text-lg font-semibold text-white cursor-pointer">¿Necesito tener equipo de entrenamiento en casa?</summary>
-                    <p class="text-gray-300 mt-2">No necesariamente. Nuestros planes se adaptan a tus recursos y entorno. Podemos diseñar rutinas con tu peso corporal o el equipo que tengas. También podemos recomendarte ejercicios al aire libre.</p>
-                </details>
-                <details class="bg-gray-800 rounded-lg p-6 shadow-md">
-                    <summary class="text-lg font-semibold text-white cursor-pointer">¿La asesoría es completamente personalizada?</summary>
-                    <p class="text-gray-300 mt-2">¡Absolutamente! Las asesorías son 100% personalizadas, con planes basados en tus objetivos, condición física y estilo de vida. Hay seguimiento continuo y ajustes según avances.</p>
-                </details>
-            </div>
-        </div>
-    </section>
+  <footer class="bg-gray-900 py-4 text-center text-gray-400">
+    <p>&copy; 2025 AlineaFit. Todos los derechos reservados. | Publicado en <a href="https://pages.github.com/" target="_blank" class="hover:text-white">GitHub Pages</a></p>
+  </footer>
 
-    <footer class="bg-gray-900 py-4 text-center text-gray-400">
-        <p>&copy; 2025 AlineaFit. Todos los derechos reservados. | Publicado en <a href="https://pages.github.com/" target="_blank" class="hover:text-white">GitHub Pages</a></p>
-    </footer>
+  <a href="https://wa.me/5570869985" target="_blank" class="whatsapp-float">
+    <div class="whatsapp-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path fill-rule="evenodd" d="M19.086 3.914a10 10 0 0 1-14.142 14.142L3 21l2.929-2.929a10 10 0 0 1 14.142-14.142zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-1-5a1 1 0 1 0 2 0v3a1 1 0 1 0-2 0v-3zm2 1a1 1 0 1 0-2 0h-1a1 1 0 1 0 0 2h1a1 1 0 1 0 2 0v-1z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </a>
 
-    <a href="https://wa.me/5570869985" target="_blank" class="whatsapp-float">
-        <div class="whatsapp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path fill-rule="evenodd" d="M19.086 3.914a10 10 0 0 1-14.142 14.142L3 21l2.929-2.929a10 10 0 0 1 14.142-14.142zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-1-5a1 1 0 1 0 2 0v3a1 1 0 1 0-2 0v-3zm2 1a1 1 0 1 0-2 0h-1a1 1 0 1 0 0 2h1a1 1 0 1 0 2 0v-1z" clip-rule="evenodd" />
-            </svg>
-        </div>
-    </a>
-
-    <script>
-        function downloadHTML() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const a = document.createElement('a');
-            const url = URL.createObjectURL(blob);
-            a.href = url;
-            a.download = 'alineafit.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        }
-    </script>
+  <script>
+    function downloadHTML() {
+      const htmlContent = document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const a = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
 
 </body>
 </html>
