@@ -40,22 +40,19 @@
             z-index: 1000;
         }
         .download-button {
-            background-color: #4CAF50; /* Green */
+            background-color: #4CAF50;
             border: none;
             color: white;
             padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
             border-radius: 5px;
+            cursor: pointer;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body class="bg-black">
+
     <div class="download-button-container">
         <button class="download-button" onclick="downloadHTML()">Descargar HTML</button>
     </div>
@@ -63,7 +60,7 @@
     <nav class="bg-blue-500 fixed top-0 w-full z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="Logo-alineafit.png" alt="Logo AlineaFit" class="h-8 mr-2">
+                <img src="imagen/Logotipo-alineafit.png" alt="Logo AlineaFit" class="h-8 mr-2">
                 <span class="font-bold text-white">AlineaFit</span>
             </a>
             <div class="hidden md:flex space-x-6">
@@ -86,9 +83,9 @@
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Bienvenida a AlineaFit 💪</h1>
             <p class="text-lg text-gray-300 mb-8">Tu camino personalizado hacia un estilo de vida más saludable y en forma.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <img src="Portada1.png" alt="Portada 1" class="rounded-lg shadow-md">
-                <img src="Portada2.png" alt="Portada 2" class="rounded-lg shadow-md">
-                <img src="Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md">
+                <img src="imagen/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md">
+                <img src="imagen/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md">
+                <img src="imagen/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md">
             </div>
         </div>
     </header>
@@ -114,12 +111,12 @@
             <h2 class="text-3xl font-bold text-white mb-8 text-center">Preguntas Frecuentes</h2>
             <div class="space-y-4">
                 <details class="bg-gray-800 rounded-lg p-6 shadow-md">
-                    <summary class="text-lg font-semibold text-white cursor-pointer focus:outline-none">¿Necesito tener equipo de entrenamiento en casa?</summary>
-                    <p class="text-gray-300 mt-2">No necesariamente. Nuestros planes de entrenamiento se adaptan a tus recursos y entorno. Podemos diseñar rutinas efectivas utilizando tu propio peso corporal o el equipo que tengas disponible. También podemos recomendarte ejercicios que se puedan realizar en espacios abiertos.</p>
+                    <summary class="text-lg font-semibold text-white cursor-pointer">¿Necesito tener equipo de entrenamiento en casa?</summary>
+                    <p class="text-gray-300 mt-2">No necesariamente. Nuestros planes se adaptan a tus recursos y entorno. Podemos diseñar rutinas con tu peso corporal o el equipo que tengas. También podemos recomendarte ejercicios al aire libre.</p>
                 </details>
                 <details class="bg-gray-800 rounded-lg p-6 shadow-md">
-                    <summary class="text-lg font-semibold text-white cursor-pointer focus:outline-none">¿La asesoría es completamente personalizada?</summary>
-                    <p class="text-gray-300 mt-2">¡Absolutamente! En AlineaFit, creemos en la individualidad de cada persona. Nuestras asesorías son 100% personalizadas, basadas en tus objetivos, condición física actual, preferencias y estilo de vida. Recibirás un plan de entrenamiento y una guía nutricional diseñados específicamente para ti, con seguimiento continuo y ajustes según sea necesario.</p>
+                    <summary class="text-lg font-semibold text-white cursor-pointer">¿La asesoría es completamente personalizada?</summary>
+                    <p class="text-gray-300 mt-2">¡Absolutamente! Las asesorías son 100% personalizadas, con planes basados en tus objetivos, condición física y estilo de vida. Hay seguimiento continuo y ajustes según avances.</p>
                 </details>
             </div>
         </div>
@@ -151,5 +148,6 @@
             URL.revokeObjectURL(url);
         }
     </script>
+
 </body>
 </html>
