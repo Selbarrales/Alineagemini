@@ -7,27 +7,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #0D0D0D;
       color: #FAFAFA;
     }
-    .whatsapp-float {
+    .whatsapp-float, .scroll-top-btn {
       position: fixed;
       bottom: 20px;
-      right: 20px;
       z-index: 1000;
     }
-    .whatsapp-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #25D366;
-      color: #FAFAFA;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
+    .whatsapp-float {
+      right: 20px;
+    }
+    .scroll-top-btn {
+      left: 20px;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 9999px;
+      padding: 10px 15px;
+      cursor: pointer;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
   </style>
@@ -52,22 +54,18 @@
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Bienvenidos a AlineaFit 💪</h1>
       <p class="text-lg text-gray-300 mb-8">Tu camino personalizado hacia un estilo de vida más saludable y en forma.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <img src="img/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md w-full">
-          <p class="mt-2 text-white">Portada 1</p>
-        </div>
-        <div>
-          <img src="img/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md w-full">
-          <p class="mt-2 text-white">Portada 2</p>
-        </div>
-        <div>
-          <img src="img/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md w-full">
-          <p class="mt-2 text-white">Planes y Costos</p>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <img src="img/Portada1.png" alt="Portada 1" class="rounded-lg shadow-md w-full">
+        <img src="img/Portada2.png" alt="Portada 2" class="rounded-lg shadow-md w-full">
       </div>
     </div>
   </header>
+
+  <section id="planes" class="py-10 bg-black">
+    <div class="container mx-auto px-4 text-center">
+      <img src="img/Planes-costos.png" alt="Planes y Costos" class="rounded-lg shadow-md w-full max-w-5xl mx-auto">
+    </div>
+  </section>
 
   <section id="testimonios" class="py-16 bg-gray-900">
     <div class="container mx-auto px-4 text-center">
@@ -91,13 +89,25 @@
       <div class="space-y-4">
         <details class="bg-gray-800 rounded-lg p-6 shadow-md">
           <summary class="text-lg font-semibold text-white cursor-pointer">¿Necesito tener equipo de entrenamiento en casa?</summary>
-          <p class="text-gray-300 mt-2">No necesariamente. Nuestros planes se adaptan a tus recursos y entorno. Podemos diseñar rutinas con tu peso corporal o el equipo que tengas. También podemos recomendarte ejercicios al aire libre.</p>
+          <p class="text-gray-300 mt-2">No necesariamente. Nuestros planes se adaptan a tus recursos y entorno. Podemos diseñar rutinas con tu peso corporal o el equipo que tengas.</p>
         </details>
         <details class="bg-gray-800 rounded-lg p-6 shadow-md">
           <summary class="text-lg font-semibold text-white cursor-pointer">¿La asesoría es completamente personalizada?</summary>
-          <p class="text-gray-300 mt-2">¡Absolutamente! Las asesorías son 100% personalizadas, con planes basados en tus objetivos, condición física y estilo de vida. Hay seguimiento continuo y ajustes según avances.</p>
+          <p class="text-gray-300 mt-2">¡Absolutamente! Las asesorías son 100% personalizadas, con planes basados en tus objetivos, condición física y estilo de vida.</p>
         </details>
       </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4 max-w-xl">
+      <h2 class="text-3xl font-bold text-white mb-6 text-center">Contáctanos</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nombre completo" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white" required>
+        <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white" required>
+        <textarea placeholder="Tu mensaje" class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white h-32" required></textarea>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg w-full">Enviar mensaje</button>
+      </form>
     </div>
   </section>
 
@@ -108,4 +118,14 @@
   <a href="https://wa.me/5570869985" target="_blank" class="whatsapp-float">
     <div class="whatsapp-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-        <path fill-rule="evenodd" d="
+        <path fill-rule="evenodd" d="M19.086 3.914a10 10 0 0 1-14.142 14.142L3 21l2.929-2.929a10 10 0 0 1 14.142-14.142zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-1-5a1 1 0 1 0 2 0v3a1 1 0 1 0-2 0v-3zm2 1a1 1 0 1 0-2 0h-1a1 1 0 1 0 0 2h1a1 1 0 1 0 2 0v-1z" clip-rule="evenodd" />
+      </svg>
+    </div>
+  </a>
+
+  <div class="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Subir
+  </div>
+
+</body>
+</html>
